@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Contenedor izquierdo (vacío) -->
+    <FrameLayout
+        android:id="@+id/left_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#E0E0E0"
+        app:layout_constraintBottom_toTopOf="@id/buttons_container"
+        app:layout_constraintEnd_toStartOf="@id/right_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Vista personalizada para el diagrama de Venn con círculos concéntricos -->
+        <com.z_iti_271311_u3_e08.VennDiagramView
+            android:id="@+id/vennDiagramView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+
+
+
+    <!-- Contenedor derecho (contenido actual) -->
+    <FrameLayout
+        android:id="@+id/right_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/buttons_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/left_container"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Hello World!" />
+    </FrameLayout>
+
+    <!-- Contenedor de botones -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E0E0E0"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="9"
+            android:useDefaultMargins="true">
+
+            <!-- Primera fila -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_L"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="L ↑" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_F"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="F ↓" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_R"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="R ↑" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_B"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="B ↓" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_U"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="U←" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_D"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="D←" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_M"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="M ↑" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_E"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="E←" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_S"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="S ↓" />
+
+
+            <!-- Segunda fila -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_L_prime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="L ↓" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_F_prime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="F ↑" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_R_prime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="R ↓" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_B_prime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="B ↑" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_U_prime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="U→" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_D_prime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="D→" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_M_prime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="M ↓" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_E_prime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="E→" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_S_prime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="S ↑" />
+        </GridLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
